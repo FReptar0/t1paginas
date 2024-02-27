@@ -13,7 +13,6 @@ import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import LeaderboardOutlinedIcon from '@mui/icons-material/LeaderboardOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-import LogoutIcon from '@mui/icons-material/Logout';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -25,15 +24,6 @@ const Sidebar: React.FC<{}> = () => {
     const handleDrawerToggle = () => {
         setOpen(!open);
     };
-
-    useEffect(() => {
-        document.addEventListener('mousedown', (event) => {
-            if (drawerRef.current && !drawerRef.current.contains(event.target as HTMLElement)) {
-                setOpen(false);
-            }
-        });
-        return () => document.removeEventListener('mousedown', handleDrawerToggle);
-    }, []);
 
     const menuItems = [
         { name: 'Home', route: '/', icon: <HomeOutlinedIcon /> },
