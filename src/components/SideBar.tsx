@@ -51,19 +51,28 @@ const Sidebar: React.FC<{}> = () => {
                 anchor="left"
                 PaperProps={{
                     sx: {
-                        width: 240,
+                        width: open ? 240 : 60,
                         backgroundColor: '#f5f5f5',
                         borderRight: '1px solid #ddd',
                     },
                     ref: drawerRef,
                 }}
             >
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <div style={{ padding: '10px 0' }}>
-                        <img src="/logo.svg" alt="Logo" style={{ width: '80%', height: 'auto', margin: '0 auto', display: 'block' }} />
+                {
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        {open ? (
+                            <div style={{ padding: '10px 0' }}>
+                                <img src="/logo.svg" alt="Logo" style={{ width: '80%', height: 'auto', margin: '0 auto', display: 'block' }} />
+                            </div>
+                        ) : (
+                            <div style={{ padding: '10px 0' }}>
+                                <img src="/logo_meta.png" alt="Logo" style={{ width: '80%', height: 'auto', margin: '0 auto', display: 'block' }} />
+                            </div>
+                        )}
                     </div>
-                </div>
+                }
                 <Divider />
+
                 <List>
                     {menuItems.map((item) => (
                         <Link href={'#'} key={item.name}
@@ -84,7 +93,7 @@ const Sidebar: React.FC<{}> = () => {
                                 >
                                     {item.icon}
                                 </ListItemIcon>
-                                <ListItemText primary={item.name} />
+                                <ListItemText primary={open ? item.name : ''} />
                             </ListItem>
                         </Link>
                     ))}
@@ -93,7 +102,7 @@ const Sidebar: React.FC<{}> = () => {
             <div style={{
                 position: 'absolute',
                 top: '50%',
-                left: 210,
+                left: open ? 210 : 30,
                 transform: 'translateY(-50%)',
                 backgroundColor: '#f5f5f5',
                 padding: '5px',
