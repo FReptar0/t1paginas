@@ -1,7 +1,15 @@
-import React from 'react'
+import React from 'react';
+import Sidebar from '../components/SideBar';
 
-export default function index() {
+const Index: React.FC = () => {
     return (
-        <div>index</div>
-    )
-}
+        <div>
+            <Sidebar>
+                {/* Contenido adicional dentro del Sidebar */}
+            </Sidebar>
+            <div>Contenido principal de la página</div>
+        </div>
+    );
+};
+
+export default Index;
