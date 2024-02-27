@@ -6,8 +6,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import KeyboardDoubleArrowRightOutlinedIcon from '@mui/icons-material/KeyboardDoubleArrowRightOutlined';
+import KeyboardDoubleArrowLeftOutlinedIcon from '@mui/icons-material/KeyboardDoubleArrowLeftOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import LeaderboardOutlinedIcon from '@mui/icons-material/LeaderboardOutlined';
@@ -20,15 +20,10 @@ import { useRouter } from 'next/router';
 const Sidebar: React.FC<{}> = () => {
     const router = useRouter();
     const [open, setOpen] = useState<boolean>(true);
-    const [selected, setSelected] = useState<string>('/');
     const drawerRef = useRef<HTMLDivElement>(null);
 
     const handleDrawerToggle = () => {
         setOpen(!open);
-    };
-
-    const handleListItemClick = (event: React.SyntheticEvent, item: string) => {
-        setSelected(item);
     };
 
     useEffect(() => {
@@ -64,9 +59,6 @@ const Sidebar: React.FC<{}> = () => {
                 }}
             >
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <IconButton onClick={handleDrawerToggle}>
-                        {open ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-                    </IconButton>
                     <div style={{ padding: '10px 0' }}>
                         <img src="/logo.svg" alt="Logo" style={{ width: '80%', height: 'auto', margin: '0 auto', display: 'block' }} />
                     </div>
@@ -98,6 +90,21 @@ const Sidebar: React.FC<{}> = () => {
                     ))}
                 </List>
             </Drawer>
+            <div style={{
+                position: 'absolute',
+                top: '50%',
+                left: 210,
+                transform: 'translateY(-50%)',
+                backgroundColor: '#f5f5f5',
+                padding: '5px',
+                borderRadius: '50%',
+                zIndex: 9999,
+                border: '1px solid #ddd',
+            }}>
+                <IconButton onClick={handleDrawerToggle}>
+                    {open ? <KeyboardDoubleArrowLeftOutlinedIcon /> : <KeyboardDoubleArrowRightOutlinedIcon />}
+                </IconButton>
+            </div>
         </div>
     );
 }
