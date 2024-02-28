@@ -20,6 +20,7 @@ const Header = () => {
     const [open, setOpen] = React.useState(false);
 
     const handleOpenMenu = (event: { currentTarget: SetStateAction<null>; }) => {
+        console.log(event.currentTarget);
         setAnchorEl(event.currentTarget);
     };
 
@@ -128,7 +129,7 @@ const Header = () => {
                         <Typography variant="body1" component="div" sx={{ marginRight: '12px' }}>
                             Fernando Rodriguez
                         </Typography>
-                        <IconButton onClick={handleOpenMenu}>
+                        <IconButton onClick={(event: React.MouseEvent<HTMLButtonElement>) => handleOpenMenu(event)}>
                             <Avatar sx={{ bgcolor: "#D93A26" }}>F</Avatar>
                         </IconButton>
                     </div>
