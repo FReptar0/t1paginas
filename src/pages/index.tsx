@@ -1,13 +1,12 @@
 import React from 'react';
 import { Box, styled } from '@mui/material';
-import Menu from '../components/Menu';
+import Menu from '../modules/Menu';
 
 const DrawerHeader = styled('div')(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
     padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
     ...theme.mixins.toolbar,
 }));
 

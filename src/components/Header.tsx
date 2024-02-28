@@ -1,5 +1,5 @@
 import { AppBar, Toolbar, TextField, IconButton, Avatar, Menu, MenuItem, SelectChangeEvent } from "@mui/material";
-import React, { SetStateAction, useState } from "react";
+import React from "react";
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 import Typography from "@mui/material/Typography";
 import Select from "@mui/material/Select";
@@ -41,7 +41,6 @@ const Header = () => {
                     height: '80px',
                 }}
             >
-                {/* Sección izquierda */}
                 <div style={{ display: 'flex', alignItems: 'center', marginLeft:'70px' }}>
                     <FormControl>
                         <Select
@@ -103,7 +102,6 @@ const Header = () => {
                     </IconButton>
                 </div>
 
-                {/* Sección derecha */}
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     <IconButton
                         sx={{
