@@ -14,20 +14,8 @@ const Header = () => {
         { name: 'Nike', avatar: 'N' },
     ];
 
-
-    const [anchorEl, setAnchorEl] = useState(null);
     const [store, setStore] = React.useState<string>(storeNames[0].name);
     const [open, setOpen] = React.useState(false);
-
-    const handleOpenMenu = (event: { currentTarget: SetStateAction<null>; }) => {
-        console.log(event.currentTarget);
-        setAnchorEl(event.currentTarget);
-    };
-
-    const handleCloseMenu = () => {
-        setAnchorEl(null);
-    };
-
 
     const handleChange = (event: SelectChangeEvent<typeof store>) => {
         setStore(event.target.value);
@@ -129,19 +117,11 @@ const Header = () => {
                         <Typography variant="body1" component="div" sx={{ marginRight: '12px' }}>
                             Fernando Rodriguez
                         </Typography>
-                        <IconButton onClick={(event: React.MouseEvent<HTMLButtonElement>) => handleOpenMenu(event)}>
+                        <IconButton>
                             <Avatar sx={{ bgcolor: "#D93A26" }}>F</Avatar>
                         </IconButton>
                     </div>
                 </div>
-                <Menu
-                    anchorEl={anchorEl}
-                    open={Boolean(anchorEl)}
-                    onClose={handleCloseMenu}
-                >
-                    <MenuItem>Ver perfil</MenuItem>
-                    <MenuItem>Cerrar sesión</MenuItem>
-                </Menu>
             </Toolbar>
         </AppBar>
     );
