@@ -29,6 +29,13 @@ const Header = () => {
         setOpen(true);
     };
 
+    React.useEffect(() => {
+        // Update the URL parameter with the selected store value
+        const url = new URL(window.location.href);
+        url.searchParams.set('store', store);
+        window.history.replaceState({}, '', url.toString());
+    }, [store]);
+
     return (
         <AppBar position="static">
             <Toolbar
