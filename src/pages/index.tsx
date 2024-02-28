@@ -1,22 +1,25 @@
 import React from 'react';
-import Sidebar from '../components/SideBar';
-import Container from '@mui/material/Container';
+import { Box, styled } from '@mui/material';
+import Menu from '../components/Menu';
+
+const DrawerHeader = styled('div')(({ theme }) => ({
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    padding: theme.spacing(0, 1),
+    // necessary for content to be below app bar
+    ...theme.mixins.toolbar,
+}));
 
 const Index: React.FC = () => {
     return (
         <>
-            {/* El sidebar debe hacer que los demas elementos no puedan estar detras de el, debe ir en un bloque estilo aside */}
-            <Container
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    padding: 0,
-                    margin: 0,
-                    height: '100vh',
-                }}
-            >
-                <Sidebar />
-            </Container>
+            <Box sx={{ display: 'flex' }}>
+                <Menu />
+                <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+                    <DrawerHeader />
+                </Box>
+            </Box>
         </>
     );
 };

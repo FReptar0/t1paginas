@@ -42,7 +42,7 @@ const Header = () => {
                 }}
             >
                 {/* Sección izquierda */}
-                <div style={{ display: 'flex', alignItems: 'center' }}>
+                <div style={{ display: 'flex', alignItems: 'center', marginLeft:'70px' }}>
                     <FormControl>
                         <Select
                             labelId="demo-controlled-open-select-label"
