@@ -112,7 +112,11 @@ const Menu: React.FC<{}> = () => {
                 <Header />
             </AppBar>
             <Drawer variant="permanent" open={open} sx={{ zIndex: '99999' }}>
-                <DrawerHeader>
+                <DrawerHeader
+                    sx={{
+                        height: '80px',
+                    }}
+                >
                     {open ? (
                         <div style={{ padding: '10px 0' }}>
                             <img src="/logo.svg" alt="Logo" style={{ width: '80%', height: 'auto', margin: '0 auto', display: 'block' }} />
