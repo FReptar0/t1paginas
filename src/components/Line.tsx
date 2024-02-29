@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import LineChartModelProps from '../utils/LineChartModel';
-import { LineChart  } from '@mui/x-charts/LineChart';
+import { LineChart  } from '@mui/x-charts';
 
 
 const LineComponent: React.FC<LineChartModelProps> = (props) => {
