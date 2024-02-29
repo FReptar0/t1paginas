@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Card } from '@mui/material';
+import { Box, Card, Container } from '@mui/material';
 import Sales from './Sales';
 import ConversionOverTime from './ConversionsOverTime';
 import Orders from './Orders';
@@ -10,11 +10,10 @@ const DataVizualizeContainer: React.FC = () => {
         <>
             <Box sx={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px', marginTop: '20px' }}>
                 <Card sx={{
-                    height: '100%',
                     border: '1px solid #cecece',
                     boxShadow: 'inherit',
+                    padding: '20px',
                     width: '100%',
-                    padding: '20px'
                 }}>
                     <Sales />
                 </Card>
