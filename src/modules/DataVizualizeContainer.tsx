@@ -66,7 +66,6 @@ const DataVizualizeContainer: React.FC = () => {
                 </Card>
 
                 <Card sx={{
-                    height: '300px',
                     border: '1px solid #cecece',
                     borderRadius: '10px',
                     width: '100%',
@@ -83,7 +82,12 @@ const DataVizualizeContainer: React.FC = () => {
                             padding: '0px',
                         }}
                     />
-                    <CardContent>
+                    <CardContent
+                        sx={{
+                            padding: '0px',
+                            marginTop: '10px'
+                        }}
+                    >
                         <StockValue />
                     </CardContent>
                 </Card>
