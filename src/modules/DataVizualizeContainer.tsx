@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Card, Container } from '@mui/material';
+import { Box, Card, CardActions, CardContent, CardHeader, IconButton, Typography } from '@mui/material';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Sales from './Sales';
 import ConversionOverTime from './ConversionsOverTime';
 import Orders from './Orders';
@@ -22,15 +23,26 @@ const DataVizualizeContainer: React.FC = () => {
 
             <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '20px', marginTop: '20px' }}>
                 <Card sx={{
-                    height: '300px',
                     border: '1px solid #cecece',
                     borderRadius: '10px',
                     width: '100%',
                     padding: '20px'
 
                 }}>
+                    <CardHeader
+                        action={
+                            <IconButton>
+                                <ChevronRightIcon />
+                            </IconButton>
+                        }
+                        title="Conversiones a lo largo del tiempo"
+                        sx={{
+                            padding: '0px',
+                        }}
+                    />
                     <ConversionOverTime />
                 </Card>
+
                 <Card sx={{
                     height: '300px',
                     border: '1px solid #cecece',
@@ -38,8 +50,22 @@ const DataVizualizeContainer: React.FC = () => {
                     width: '100%',
                     padding: '20px'
                 }}>
-                    <Orders />
+                    <CardHeader
+                        action={
+                            <IconButton>
+                                <ChevronRightIcon />
+                            </IconButton>
+                        }
+                        title="Ordenes"
+                        sx={{
+                            padding: '0px',
+                        }}
+                    />
+                    <CardContent>
+                        <Orders />
+                    </CardContent>
                 </Card>
+
                 <Card sx={{
                     height: '300px',
                     border: '1px solid #cecece',
@@ -47,7 +73,20 @@ const DataVizualizeContainer: React.FC = () => {
                     width: '100%',
                     padding: '20px'
                 }}>
-                    <StockValue />
+                    <CardHeader
+                        action={
+                            <IconButton>
+                                <ChevronRightIcon />
+                            </IconButton>
+                        }
+                        title="Valor del inventario"
+                        sx={{
+                            padding: '0px',
+                        }}
+                    />
+                    <CardContent>
+                        <StockValue />
+                    </CardContent>
                 </Card>
             </Box>
         </>
