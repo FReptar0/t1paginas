@@ -75,7 +75,11 @@ const Orders: React.FC = () => {
                                 fontWeight: 'bold'
                             }}
                         >25%</Typography>
-                        <Typography>En preparación</Typography>
+                        <Typography
+                            sx={{
+                                color: '#7B7B7B'
+                            }}
+                        >En preparación</Typography>
                     </Box>
                     <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                         <Box sx={{ width: '13px', height: '13px', borderRadius: '50%', backgroundColor: '#01C671', mr: 1 }} />
@@ -86,7 +90,11 @@ const Orders: React.FC = () => {
                                 fontWeight: 'bold'
                             }}
                         >12.5%</Typography>
-                        <Typography>Enviado</Typography>
+                        <Typography
+                            sx={{
+                                color: '#7B7B7B'
+                            }}
+                        >Enviado</Typography>
                     </Box>
                     <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                         <Box sx={{ width: '13px', height: '13px', borderRadius: '50%', backgroundColor: '#FFC956', mr: 1 }} />
@@ -97,7 +105,11 @@ const Orders: React.FC = () => {
                                 fontWeight: 'bold'
                             }}
                         >12.5%</Typography>
-                        <Typography>Reembolso</Typography>
+                        <Typography
+                            sx={{
+                                color: '#7B7B7B'
+                            }}
+                        >Reembolso</Typography>
                     </Box>
                 </Box>
 
@@ -111,7 +123,11 @@ const Orders: React.FC = () => {
                                 fontWeight: 'bold'
                             }}
                         >25%</Typography>
-                        <Typography>Listo para empaquetar</Typography>
+                        <Typography
+                            sx={{
+                                color: '#7B7B7B'
+                            }}
+                        >Listo para empaquetar</Typography>
                     </Box>
                     <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                         <Box sx={{ width: '13px', height: '13px', borderRadius: '50%', backgroundColor: '#2180FF', mr: 1 }} />
@@ -122,7 +138,11 @@ const Orders: React.FC = () => {
                                 fontWeight: 'bold'
                             }}
                         >12.5%</Typography>
-                        <Typography>Entregado</Typography>
+                        <Typography
+                            sx={{
+                                color: '#7B7B7B'
+                            }}
+                        >Entregado</Typography>
                     </Box>
                     <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                         <Box sx={{ width: '13px', height: '13px', borderRadius: '50%', backgroundColor: '#D93A26', mr: 1 }} />
@@ -133,7 +153,11 @@ const Orders: React.FC = () => {
                                 fontWeight: 'bold'
                             }}
                         >12.5%</Typography>
-                        <Typography>Cancelado</Typography>
+                        <Typography
+                            sx={{
+                                color: '#7B7B7B'
+                            }}
+                        >Cancelado</Typography>
                     </Box>
                 </Box>
             </Box>
