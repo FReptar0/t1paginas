@@ -73,7 +73,14 @@ const StockValue: React.FC = () => {
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                     <Typography>M Negro</Typography>
-                    <Typography>540 Piezas</Typography>
+                    <Typography
+                        sx={{
+                            marginLeft: '10px',
+                            color: '#7B7B7B'
+                        }}
+                    >
+                        540 Piezas
+                        </Typography>
                 </Box>
             </Box>
             <Box 
@@ -113,7 +120,14 @@ const StockValue: React.FC = () => {
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                     <Typography>M Negro</Typography>
-                    <Typography>540 Piezas</Typography>
+                    <Typography
+                        sx={{
+                            marginLeft: '10px',
+                            color: '#7B7B7B'
+                        }}
+                    >
+                        540 Piezas
+                        </Typography>
                 </Box>
             </Box>
             <Box 
@@ -153,7 +167,14 @@ const StockValue: React.FC = () => {
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                     <Typography>M Negro</Typography>
-                    <Typography>540 Piezas</Typography>
+                    <Typography
+                        sx={{
+                            marginLeft: '10px',
+                            color: '#7B7B7B'
+                        }}
+                    >
+                        540 Piezas
+                        </Typography>
                 </Box>
             </Box>
 
