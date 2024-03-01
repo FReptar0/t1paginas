@@ -46,7 +46,7 @@ const ConversionOverTime: React.FC = () => {
                     padding: '0px',
                 }}
             >
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: '15px', }}>
                     <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                         <Typography
                             variant="h4"
