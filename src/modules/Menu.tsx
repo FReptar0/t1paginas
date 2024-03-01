@@ -100,7 +100,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 const Menu: React.FC<{}> = () => {
     const router = useRouter();
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(true);
 
     const handleDrawerToggle = () => {
         setOpen(!open);
