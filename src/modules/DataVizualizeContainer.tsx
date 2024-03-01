@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Card, CardActions, CardContent, CardHeader, IconButton, Typography } from '@mui/material';
+import { Box, Card, CardContent, CardHeader, IconButton, Typography } from '@mui/material';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Sales from './Sales';
 import ConversionOverTime from './ConversionsOverTime';

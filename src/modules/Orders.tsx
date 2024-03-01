@@ -1,6 +1,6 @@
 import React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import { Typography } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 import DoughnutComponent from '../components/Doughnut';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -56,90 +56,87 @@ const Orders: React.FC = () => {
     return (
         <>
             <DoughnutComponent data={data} options={options} height={200} />
-            <div
-                style={{
+            <Box
+                sx={{
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'space-evenly',
-                    marginTop: '20px',
+                    mt: 2,
                     borderTop: '1px solid #cecece'
                 }}
             >
-                <div style={{ display: 'flex', flexDirection: 'column', marginTop: '10px' }}>
-                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                        <div style={{ width: '13px', height: '13px', borderRadius: '50%', backgroundColor: '#AD7CFA', marginRight: '5px' }}></div>
+                <Box sx={{ display: 'flex', flexDirection: 'column', mt: 1 }}>
+                    <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                        <Box sx={{ width: '13px', height: '13px', borderRadius: '50%', backgroundColor: '#AD7CFA', mr: 1 }} />
                         <Typography
                             sx={{
-                                marginRight: '5px',
-                                marginLeft: '5px',
+                                mr: 1,
+                                ml: 1,
                                 fontWeight: 'bold'
                             }}
                         >25%</Typography>
                         <Typography>En preparación</Typography>
-                    </div>
-                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                        <div style={{ width: '13px', height: '13px', borderRadius: '50%', backgroundColor: '#01C671', marginRight: '5px' }}></div>
+                    </Box>
+                    <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                        <Box sx={{ width: '13px', height: '13px', borderRadius: '50%', backgroundColor: '#01C671', mr: 1 }} />
                         <Typography
                             sx={{
-                                marginRight: '5px',
-                                marginLeft: '5px',
+                                mr: 1,
+                                ml: 1,
                                 fontWeight: 'bold'
                             }}
                         >12.5%</Typography>
                         <Typography>Enviado</Typography>
-                    </div>
-
-                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                        <div style={{ width: '13px', height: '13px', borderRadius: '50%', backgroundColor: '#FFC956', marginRight: '5px' }}></div>
+                    </Box>
+                    <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                        <Box sx={{ width: '13px', height: '13px', borderRadius: '50%', backgroundColor: '#FFC956', mr: 1 }} />
                         <Typography
                             sx={{
-                                marginRight: '5px',
-                                marginLeft: '5px',
+                                mr: 1,
+                                ml: 1,
                                 fontWeight: 'bold'
                             }}
                         >12.5%</Typography>
                         <Typography>Reembolso</Typography>
-                    </div>
-                </div>
+                    </Box>
+                </Box>
 
-                <div style={{ display: 'flex', flexDirection: 'column', marginTop: '10px' }}>
-                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                        <div style={{ width: '13px', height: '13px', borderRadius: '50%', backgroundColor: '#FF6700', marginRight: '5px' }}></div>
+                <Box sx={{ display: 'flex', flexDirection: 'column', mt: 1 }}>
+                    <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                        <Box sx={{ width: '13px', height: '13px', borderRadius: '50%', backgroundColor: '#FF6700', mr: 1 }} />
                         <Typography
                             sx={{
-                                marginRight: '5px',
-                                marginLeft: '5px',
+                                mr: 1,
+                                ml: 1,
                                 fontWeight: 'bold'
                             }}
                         >25%</Typography>
                         <Typography>Listo para empaquetar</Typography>
-                    </div>
-
-                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                        <div style={{ width: '13px', height: '13px', borderRadius: '50%', backgroundColor: '#2180FF', marginRight: '5px' }}></div>
+                    </Box>
+                    <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                        <Box sx={{ width: '13px', height: '13px', borderRadius: '50%', backgroundColor: '#2180FF', mr: 1 }} />
                         <Typography
                             sx={{
-                                marginRight: '5px',
-                                marginLeft: '5px',
+                                mr: 1,
+                                ml: 1,
                                 fontWeight: 'bold'
                             }}
                         >12.5%</Typography>
                         <Typography>Entregado</Typography>
-                    </div>
-
-                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                        <div style={{ width: '13px', height: '13px', borderRadius: '50%', backgroundColor: '#D93A26', marginRight: '5px' }}></div>
+                    </Box>
+                    <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                        <Box sx={{ width: '13px', height: '13px', borderRadius: '50%', backgroundColor: '#D93A26', mr: 1 }} />
                         <Typography
                             sx={{
-                                marginRight: '5px',
-                                marginLeft: '5px',
+                                mr: 1,
+                                ml: 1,
                                 fontWeight: 'bold'
                             }}
                         >12.5%</Typography>
                         <Typography>Cancelado</Typography>
-                    </div>
-                </div>
-            </div>
+                    </Box>
+                </Box>
+            </Box>
         </>
     );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge, Typography } from '@mui/material';
+import { Badge, Typography, Box } from '@mui/material';
 import LineComponent from '../components/Line';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
@@ -69,79 +69,59 @@ const Sales: React.FC = () => {
                 Ventas
             </Typography>
 
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginBottom: '5px', marginTop: '5px' }}>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <Typography
-                        sx={{
-                            fontSize: '30px',
-                        }}
-                    >
+            <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', mb: 1, mt: 1 }}>
+                <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <Typography sx={{ fontSize: '30px' }}>
                         $ 420,000.00
                     </Typography>
                     <Badge
-                        badgeContent={
-                            badgeContent
-                        }
+                        badgeContent={badgeContent}
                         color="success"
                         sx={{
                             '& .MuiBadge-badge': {
                                 backgroundColor: '#9FDBC2',
                                 color: '#fff',
                                 borderRadius: '5px',
-                                marginRight: '-50px',
+                                mr: -6,
                             },
                         }}
                     />
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginRight: '50px' }}>
-                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                            <div style={{ width: '13px', height: '13px', borderRadius: '50%', backgroundColor: 'rgb(217, 58, 38)', marginRight: '10px' }}></div>
-                            <Typography
-                                sx={{
-                                    color: '#7B7B7B',
-                                }}
-                            >
+                </Box>
+                <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', mr: 6 }}>
+                        <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                            <Box sx={{ width: '13px', height: '13px', borderRadius: '50%', backgroundColor: 'rgb(217, 58, 38)', mr: 1 }} />
+                            <Typography sx={{ color: '#7B7B7B' }}>
                                 Ventas tienda en línea
                             </Typography>
-                        </div>
+                        </Box>
                         <Typography>$324,000.00</Typography>
-                    </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginRight: '50px' }}>
-                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                            <div style={{ width: '13px', height: '13px', borderRadius: '50%', backgroundColor: 'rgb(254, 193, 193)', marginRight: '10px' }}></div>
-                            <Typography
-                                sx={{
-                                    color: '#7B7B7B',
-                                }}
-                            >
+                    </Box>
+                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', mr: 6 }}>
+                        <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                            <Box sx={{ width: '13px', height: '13px', borderRadius: '50%', backgroundColor: 'rgb(254, 193, 193)', mr: 1 }} />
+                            <Typography sx={{ color: '#7B7B7B' }}>
                                 Ventas punto de venta
                             </Typography>
-                        </div>
+                        </Box>
                         <Typography>$148,000.00</Typography>
-                    </div>
-                </div>
+                    </Box>
+                </Box>
+                <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }} />
+            </Box>
 
-                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                </div>
-            </div>
-
-
-            <div
-                style={{
+            <Box
+                sx={{
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    marginTop: '40px',
+                    mt: 4,
                     width: '90%',
                     margin: '0 auto',
                 }}
             >
-                <LineComponent data={data}
-                    options={options}
-                    height={250}
-                />
-            </div>
+                <LineComponent data={data} options={options} height={250} />
+            </Box>
         </div>
     );
 };

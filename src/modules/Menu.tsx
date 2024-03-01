@@ -18,6 +18,7 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { Box } from '@mui/system';
 
 const drawerWidth = 240;
 
@@ -118,13 +119,13 @@ const Menu: React.FC<{}> = () => {
                     }}
                 >
                     {open ? (
-                        <div style={{ padding: '10px 0' }}>
+                        <Box style={{ padding: '10px 0' }}>
                             <img src="/logo.svg" alt="Logo" style={{ width: '80%', height: 'auto', margin: '0 auto', display: 'block' }} />
-                        </div>
+                        </Box>
                     ) : (
-                        <div style={{ padding: '10px 0' }}>
+                        <Box style={{ padding: '10px 0' }}>
                             <img src="/logo_meta.png" alt="Logo" style={{ width: '80%', height: 'auto', margin: '0 auto', display: 'block' }} />
-                        </div>
+                        </Box>
                     )}
                 </DrawerHeader>
                 <Divider />
@@ -154,7 +155,7 @@ const Menu: React.FC<{}> = () => {
                     ))}
                 </List>
             </Drawer>
-            <div style={{
+            <Box style={{
                 position: 'absolute',
                 top: '50%',
                 left: open ? 210 : 35,
@@ -169,7 +170,7 @@ const Menu: React.FC<{}> = () => {
                 <IconButton onClick={handleDrawerToggle}>
                     {open ? <KeyboardDoubleArrowLeftOutlinedIcon /> : <KeyboardDoubleArrowRightOutlinedIcon />}
                 </IconButton>
-            </div>
+            </Box>
         </>
     )
 }
