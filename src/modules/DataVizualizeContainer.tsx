@@ -44,7 +44,6 @@ const DataVizualizeContainer: React.FC = () => {
                 </Card>
 
                 <Card sx={{
-                    height: '300px',
                     border: '1px solid #cecece',
                     borderRadius: '10px',
                     width: '100%',

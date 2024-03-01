@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import LineChartModelProps from '../utils/types';
+import { LineChartModelProps } from '../utils/types';
 import { Line } from 'react-chartjs-2';
 import {
     Chart as ChartJS,

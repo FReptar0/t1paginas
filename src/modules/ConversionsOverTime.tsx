@@ -127,7 +127,7 @@ const ConversionOverTime: React.FC = () => {
                     </div>
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '10px' }}>
                     <Typography
                         sx={{
                             color: '#7B7B7B',
