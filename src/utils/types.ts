@@ -28,6 +28,8 @@ interface LineChartModelProps {
             backgroundColor: string;
         }[];
     };
+
+    height: number;
 }
 
 export default LineChartModelProps;

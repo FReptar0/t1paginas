@@ -27,7 +27,8 @@ const LineComponent: React.FC<LineChartModelProps> = (props) => {
         <>
             <Line 
                 data={props.data} 
-                options={props.options} 
+                options={props.options}
+                height={props.height}
             />
         </>
     )

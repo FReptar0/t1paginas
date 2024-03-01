@@ -13,6 +13,7 @@ const DataVizualizeContainer: React.FC = () => {
                     border: '1px solid #cecece',
                     boxShadow: 'inherit',
                     padding: '20px',
+                    borderRadius: '10px',
                     width: '100%',
                 }}>
                     <Sales />
@@ -23,7 +24,7 @@ const DataVizualizeContainer: React.FC = () => {
                 <Card sx={{
                     height: '300px',
                     border: '1px solid #cecece',
-                    boxShadow: 'inherit',
+                    borderRadius: '10px',
                     width: '100%',
                     padding: '20px'
 
@@ -33,6 +34,7 @@ const DataVizualizeContainer: React.FC = () => {
                 <Card sx={{
                     height: '300px',
                     border: '1px solid #cecece',
+                    borderRadius: '10px',
                     width: '100%',
                     padding: '20px'
                 }}>
@@ -41,6 +43,7 @@ const DataVizualizeContainer: React.FC = () => {
                 <Card sx={{
                     height: '300px',
                     border: '1px solid #cecece',
+                    borderRadius: '10px',
                     width: '100%',
                     padding: '20px'
                 }}>
